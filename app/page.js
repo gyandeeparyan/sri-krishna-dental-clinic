@@ -388,7 +388,7 @@ export default function Home() {
             </h2>
             <p className="max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
               This section adds the practical details that make a clinic website feel real: doctor name, address,
-              phone contact, email, map navigation, and a social handle you can replace later with the final profile.
+              phone contact, email, map navigation, and social presence for local patients.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               <a href={clinic.phoneHref} className="hover-lift rounded-[1.5rem] border border-primary/10 bg-white/70 p-5 transition-transform">
@@ -497,7 +497,7 @@ export default function Home() {
           <div>
             <p className="font-heading text-3xl text-slate-900">{clinic.name}</p>
             <p className="mt-2 text-sm leading-7 text-slate-600">
-              Led by {clinic.doctor} · {clinic.address}
+           {clinic.doctor} · {clinic.address}
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm">
