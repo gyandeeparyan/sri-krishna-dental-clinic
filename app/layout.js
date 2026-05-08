@@ -13,18 +13,22 @@ const headingFont = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: "SrikRISHNA DENTAL CLINC",
+  title: "Sri Krishna Dental Clinic",
   description:
-    "A polished promotional website for SrikRISHNA DENTAL CLINC with modern lead capture and a future-ready path for online appointment booking.",
+    "A polished promotional website for Sri Krishna Dental Clinic with modern lead capture and a future-ready path for online appointment booking.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${bodyFont.variable} ${headingFont.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-background text-foreground"
+      >
         {children}
       </body>
     </html>

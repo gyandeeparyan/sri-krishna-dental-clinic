@@ -155,4 +155,63 @@
   .section-title {
     @apply text-4xl font-semibold tracking-tight text-balance sm:text-5xl;
   }
+
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(40px);
+    pointer-events: none;
+    opacity: 0.55;
+    animation: drift 10s ease-in-out infinite;
+  }
+
+  .orb-left {
+    top: 5rem;
+    left: -3rem;
+    width: 12rem;
+    height: 12rem;
+    background: color-mix(in oklab, var(--secondary) 60%, white);
+  }
+
+  .orb-right {
+    top: 8rem;
+    right: -2rem;
+    width: 14rem;
+    height: 14rem;
+    background: color-mix(in oklab, var(--accent) 70%, white);
+    animation-delay: -4s;
+  }
+
+  .float-slow {
+    animation: bob 6s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: bob 7s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10px, -12px, 0) scale(1.05);
+  }
 }
