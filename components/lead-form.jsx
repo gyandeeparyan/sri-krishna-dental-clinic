@@ -75,11 +75,13 @@ export function LeadForm() {
   }
 
   return (
-    <Card className="glass-card border-primary/10 bg-white/85 py-6 shadow-[0_25px_70px_-40px_rgba(35,89,145,0.55)]">
+    <Card className="surface-card py-6">
       <CardHeader>
-        <CardTitle className="text-4xl text-slate-900">Request a callback</CardTitle>
-        <CardDescription className="text-sm leading-7 text-slate-600">
-          Share a few details and the clinic can follow up for consultation guidance.
+        <p className="editorial-kicker">Inquiry form</p>
+        <CardTitle className="text-3xl text-(--ink)">Request a callback</CardTitle>
+        <CardDescription className="text-sm leading-7 text-(--charcoal)">
+          Share a few details and the clinic can follow up with the right next step for consultation, pain relief,
+          or a routine check-up.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -97,7 +99,7 @@ export function LeadForm() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700" htmlFor="fullName">
+              <label className="ui-label" htmlFor="fullName">
                 Full name
               </label>
               <Input
@@ -112,7 +114,7 @@ export function LeadForm() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700" htmlFor="phone">
+              <label className="ui-label" htmlFor="phone">
                 Phone number
               </label>
               <Input
@@ -129,7 +131,7 @@ export function LeadForm() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700" htmlFor="email">
+              <label className="ui-label" htmlFor="email">
                 Email address
               </label>
               <Input
@@ -145,7 +147,7 @@ export function LeadForm() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700" htmlFor="preferredDate">
+              <label className="ui-label" htmlFor="preferredDate">
                 Preferred date
               </label>
               <Input
@@ -159,7 +161,7 @@ export function LeadForm() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-700" htmlFor="concern">
+            <label className="ui-label" htmlFor="concern">
               Dental concern
             </label>
             <Textarea
@@ -177,7 +179,7 @@ export function LeadForm() {
           <Button
             type="submit"
             size="lg"
-            className="mt-2 h-11 rounded-full bg-primary px-6 text-sm shadow-lg shadow-cyan-200/50 hover:bg-primary/90"
+            className="mt-2 w-fit px-4"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
@@ -195,7 +197,7 @@ export function LeadForm() {
 
           {status.message ? (
             <p
-              className={status.type === "success" ? "text-sm text-emerald-700" : "text-sm text-destructive"}
+              className={status.type === "success" ? "text-sm text-(--accent-green)" : "text-sm text-destructive"}
             >
               {status.message}
             </p>
