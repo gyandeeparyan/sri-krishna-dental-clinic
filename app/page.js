@@ -40,7 +40,8 @@ const clinic = {
   address: "Peterwar, Jharkhand",
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=Sri+Krishna+Dental+Clinic+Peterwar+Jharkhand",
-  instagramHref: "https://instagram.com/srikrishna.dental.clinic",
+  instagramHref: "https://www.instagram.com/sk_dentalclinic.2301/",
+  instagramHandle: "@sk_dentalclinic.2301",
 };
 
 const differentiators = [
@@ -150,13 +151,13 @@ export default function Home() {
             <div className="rounded-[1.75rem] border border-primary/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.95),rgba(224,245,247,0.86),rgba(230,244,239,0.9))] px-5 py-6 sm:px-8 sm:py-8 lg:px-12 lg:py-12">
               <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
                 <div className="max-w-3xl space-y-6">
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                  <div className="flex flex-col gap-3 text-sm text-muted-foreground">
                     <div className="flex items-center gap-3 rounded-full border border-primary/15 bg-white/70 px-4 py-2 shadow-sm">
                       <span className="flex size-10 items-center justify-center rounded-full bg-[radial-gradient(circle_at_top,#8fd6ea,#3c7fca)] text-white shadow-lg shadow-cyan-200/50">
                         <SmilePlus className="size-5" />
                       </span>
                       <div>
-                        <p className="font-heading text-xl leading-none text-foreground">
+                        <p className="font-heading text-xl font-bold uppercase leading-none text-foreground">
                           {clinic.name}
                         </p>
                         <p className="mt-1 text-xs uppercase tracking-[0.24em] text-primary/80">
@@ -164,8 +165,8 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <Badge variant="outline" className="border-primary/20 bg-white/60 px-3 py-1 text-primary">
-                      Led by {clinic.doctor}
+                    <Badge variant="secondary" className="w-fit bg-cyan-100 px-3 py-1 text-cyan-900">
+                      {clinic.doctor}
                     </Badge>
                   </div>
 
@@ -174,7 +175,7 @@ export default function Home() {
                       Real clinic details, contact paths, and local trust signals
                     </p>
                     <h1 className="max-w-4xl text-5xl leading-none font-semibold tracking-tight text-balance text-slate-900 sm:text-6xl lg:text-7xl">
-                      Local dental care for Peterwar families, focused on comfort, clarity, and healthy smiles.
+                      Comfortable dental care for families, with clear guidance and healthier smiles.
                     </h1>
                     <p className="max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
                       {clinic.name} is now presented as a real neighborhood practice with clear contact details,
@@ -263,11 +264,11 @@ export default function Home() {
                       <div className="grid gap-3 sm:grid-cols-2">
                         <div className="rounded-2xl border border-primary/10 bg-cyan-50/80 p-4">
                           <p className="text-3xl font-semibold text-primary">6+</p>
-                          <p className="mt-1 text-sm">Service categories clearly explained</p>
+                          <p className="mt-1 text-sm">Service categories</p>
                         </div>
                         <div className="rounded-2xl border border-emerald-200/60 bg-emerald-50/80 p-4">
                           <p className="text-3xl font-semibold text-emerald-700">24/7</p>
-                          <p className="mt-1 text-sm">Online contact access through form and links</p>
+                          <p className="mt-1 text-sm">Online access </p>
                         </div>
                       </div>
                     </CardContent>
@@ -397,7 +398,7 @@ export default function Home() {
               </a>
               <a href={clinic.emailHref} className="hover-lift rounded-[1.5rem] border border-primary/10 bg-white/70 p-5 transition-transform">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/75">Email</p>
-                <p className="mt-2 text-lg font-semibold text-slate-900 break-all">{clinic.email}</p>
+                <p className="mt-2 max-w-full break-all text-base font-semibold leading-7 text-slate-900 sm:text-lg">{clinic.email}</p>
                 <p className="mt-2 text-sm text-slate-600">Useful for follow-up questions and non-urgent requests.</p>
               </a>
               <a href={clinic.mapsHref} target="_blank" rel="noreferrer" className="hover-lift rounded-[1.5rem] border border-primary/10 bg-white/70 p-5 transition-transform">
@@ -407,8 +408,8 @@ export default function Home() {
               </a>
               <a href={clinic.instagramHref} target="_blank" rel="noreferrer" className="hover-lift rounded-[1.5rem] border border-primary/10 bg-white/70 p-5 transition-transform">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/75">Instagram</p>
-                <p className="mt-2 text-lg font-semibold text-slate-900">@srikrishna.dental.clinic</p>
-                <p className="mt-2 text-sm text-slate-600">Dummy handle added for now. Replace it later with the live clinic account.</p>
+                <p className="mt-2 max-w-full break-all text-base font-semibold leading-7 text-slate-900 sm:text-lg">{clinic.instagramHandle}</p>
+                <p className="mt-2 text-sm text-slate-600">Follow the clinic for updates, awareness posts, and smile-care tips.</p>
               </a>
             </div>
           </div>
@@ -504,9 +505,13 @@ export default function Home() {
               <PhoneCall className="size-4 text-primary" />
               {clinic.phoneDisplay}
             </a>
-            <a href={clinic.emailHref} className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-slate-700 hover:bg-cyan-50">
+            <a href={clinic.emailHref} className="inline-flex max-w-full items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-slate-700 hover:bg-cyan-50 sm:max-w-none">
               <Mail className="size-4 text-primary" />
-              {clinic.email}
+              <span className="max-w-[14rem] break-all leading-5 sm:max-w-none">{clinic.email}</span>
+            </a>
+            <a href={clinic.instagramHref} target="_blank" rel="noreferrer" className="inline-flex max-w-full items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-slate-700 hover:bg-cyan-50 sm:max-w-none">
+              <Sparkles className="size-4 text-primary" />
+              <span className="max-w-[12rem] break-all leading-5 sm:max-w-none">{clinic.instagramHandle}</span>
             </a>
             <a href={clinic.mapsHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-slate-700 hover:bg-cyan-50">
               <ExternalLink className="size-4 text-primary" />
