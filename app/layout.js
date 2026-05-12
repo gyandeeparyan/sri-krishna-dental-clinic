@@ -8,7 +8,7 @@ import {
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNavbar } from "@/components/site-navbar";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import Script from "next/script";
 import "./globals.css";
 
 const bodyFont = Inter_Tight({
@@ -35,9 +35,65 @@ const monoFont = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Sri Krishna Dental Clinic",
+  title:
+    "Sri Krishna Dental & Aesthetic Clinic | Best Dental Care in Peterwar, Jharkhand",
   description:
-    "Sri Krishna Dental Clinic presented in a refined dark editorial system with clear service pathways, hygiene guidance, and patient contact options.",
+    "Sri Krishna Dental & Aesthetic Clinic in Peterwar, Jharkhand. Expert dental care by Dr. Abhijeet Prakash. Root canals, teeth cleaning, fillings, crowns, cosmetic dentistry, and family dental services.",
+  keywords: [
+    "dental clinic peterwar",
+    "dentist jharkhand",
+    "teeth cleaning peterwar",
+    "root canal treatment",
+    "dental implants",
+    "cosmetic dentistry",
+    "family dentist",
+    "Dr. Abhijeet Prakash",
+    "dental care peterwar",
+    "smile makeover",
+    "teeth whitening",
+    "emergency dental care",
+  ],
+  authors: [{ name: "Sri Krishna Dental & Aesthetic Clinic" }],
+  creator: "Sri Krishna Dental & Aesthetic Clinic",
+  publisher: "Sri Krishna Dental & Aesthetic Clinic",
+  formatDetection: {
+    telephone: true,
+    email: true,
+  },
+  openGraph: {
+    title:
+      "Sri Krishna Dental & Aesthetic Clinic | Best Dentist in Peterwar, Jharkhand",
+    description:
+      "Professional dental and aesthetic services by Dr. Abhijeet Prakash. Root canals, cleanings, crowns, and cosmetic dentistry.",
+    url: "https://srikrishnadentalclinic.in",
+    siteName: "Sri Krishna Dental & Aesthetic Clinic",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?auto=format&fit=crop&w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Sri Krishna Dental & Aesthetic Clinic",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Sri Krishna Dental & Aesthetic Clinic | Peterwar, Jharkhand",
+    description:
+      "Expert dental care and aesthetic services. Call +91 9934838354 for appointments.",
+    images: [
+      "https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?auto=format&fit=crop&w=1200&q=80",
+    ],
+  },
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://srikrishnadentalclinic.in",
+  },
+  category: "Healthcare",
+  classification: "Dental Clinic",
 };
 
 export default function RootLayout({ children }) {
@@ -47,6 +103,37 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${bodyFont.variable} ${headingFont.variable} ${uiFont.variable} ${monoFont.variable} h-full scroll-smooth antialiased`}
     >
+      <Script
+        id="schema-org"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Sri Krishna Dental & Aesthetic Clinic",
+            "description": "Professional dental and aesthetic care clinic",
+            "url": "https://srikrishnadentalclinic.in",
+            "telephone": "+91 9934838354",
+            "email": "care@srikrishnadentalclinic.in",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Peterwar",
+              "addressRegion": "Jharkhand",
+              "addressCountry": "IN"
+            },
+            "image": "https://images.unsplash.com/photo-1588776813941-dcf9c55e84d2?auto=format&fit=crop&w=1200&q=80",
+            "medicalSpecialty": ["Dentistry", "Cosmetic Dentistry"],
+            "doctor": {
+              "@type": "Person",
+              "name": "Dr. Abhijeet Prakash"
+            },
+            "sameAs": [
+              "https://www.instagram.com/sk_dentalclinic.2301/",
+              "https://wa.me/919934838354"
+            ]
+          }),
+        }}
+      />
       <body
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"
