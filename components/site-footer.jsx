@@ -69,7 +69,7 @@ export function SiteFooter() {
 
         <div className="divider-soft flex flex-col gap-3 pt-6 text-xs text-(--ash) sm:flex-row sm:items-center sm:justify-between">
           <p className="font-ui uppercase tracking-[0.16em]">Sri Krishna Dental & Aesthetic Clinic</p>
-          <p className="font-ui">Built with care by <Link href="https://gyandeeparyan.vercel.app/" target="_blank" rel="noreferrer"><p className="underline font-semibold">Aryan Studios</p></Link></p>
+          <p className="font-ui">Built with care by <Link href="https://gyandeeparyan.vercel.app/" target="_blank" rel="noreferrer"><span className="underline font-semibold">Aryan Studios</span></Link></p>
         </div>
       </div>
     </footer>

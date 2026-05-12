@@ -17,12 +17,25 @@ export function SiteNavbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-(--hairline) bg-background/88 backdrop-blur-xl">
-      <div className="shell flex min-h-16 items-center justify-between gap-4 py-3">
+      <div className="shell relative flex min-h-16 items-center justify-between gap-4 py-3 lg:flex-row flex-col">
         <Link href="/" className="min-w-0" onClick={() => setIsOpen(false)}>
-          <p className=" text-[1rem] leading-none tracking-[0.02em] text-(--ink) sm:text-[1.8rem]">
+          <p className=" text-[2.5rem] font-heading-display font-ui font-extrabold leading-none tracking-[0.02em] text-(--ink) sm:text-[1.8rem]">
             Sri Krishna Dental & Aesthetic Clinic
           </p>
         </Link>
+
+        {/* Sticky buttons positioned absolutely on mobile */}
+        <div className="absolute top-13 right-4 flex lg:hidden items-center gap-2 z-51">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setIsOpen((current) => !current)}
+            className="inline-flex size-11 items-center justify-center rounded-full border border-(--hairline-strong) bg-secondary text-(--ink)"
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
 
         <nav className="hidden items-center gap-1 lg:flex">
           {navigationLinks.map((link) => (
@@ -62,18 +75,6 @@ export function SiteNavbar() {
 
         <div className="hidden lg:flex items-center gap-2">
           <ThemeToggle />
-        </div>
-
-        <div className="flex lg:hidden items-center gap-2">
-          <ThemeToggle />
-          <button
-            type="button"
-            onClick={() => setIsOpen((current) => !current)}
-            className="inline-flex size-11 items-center justify-center rounded-full border border-(--hairline-strong) bg-secondary text-(--ink)"
-            aria-label="Toggle navigation"
-          >
-            {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
         </div>
       </div>
 

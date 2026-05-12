@@ -37,7 +37,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex size-9 items-center justify-center rounded-full border border-(--hairline-strong) bg-secondary text-(--ink) transition-colors hover:bg-(--surface-elevated)"
+      className="inline-flex size-11 cursor-pointer items-center justify-center rounded-full border border-(--hairline-strong) bg-secondary text-(--ink) transition-colors hover:bg-(--surface-elevated)"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
