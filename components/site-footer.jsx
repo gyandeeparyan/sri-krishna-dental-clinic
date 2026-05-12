@@ -5,21 +5,19 @@ import { clinic, navigationLinks, visitingHours } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-(--divider-soft) bg-black py-16 sm:py-20">
+    <footer className="border-t border-(--divider-soft) bg-background py-16 sm:py-20">
       <div className="shell space-y-12">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.85fr_0.95fr_0.85fr]">
           <div className="space-y-4">
-            <p className="font-heading-display text-[1.8rem] leading-none tracking-[0.02em] text-(--ink)">
-              Sri Krishna Dental Clinic
+            <p className=" text-[1.8rem] leading-none tracking-[0.02em] text-(--ink)">
+              Sri Krishna Dental & Aesthetic Clinic
             </p>
-            <p className="max-w-md text-sm leading-7 text-(--charcoal)">
-              Editorial calm on a black canvas, but the purpose stays practical: help local patients understand care,
-              build better hygiene habits, and reach the clinic without friction.
-            </p>
+
             <p className="font-ui text-sm font-medium text-(--ink)">{clinic.doctor}</p>
+            <p className="font-ui text-sm font-medium text-(--ink)">Dental Surgeon</p>
             <div className="inline-flex items-center gap-2 rounded-full border border-(--hairline-strong) bg-secondary px-3 py-1.5 font-ui text-[12px] uppercase tracking-[0.18em] text-(--body-text)">
               <span className="size-2 rounded-full bg-(--accent-green)" />
-              Status: Available for inquiries
+              Available
             </div>
         </div>
 
@@ -70,8 +68,8 @@ export function SiteFooter() {
         </div>
 
         <div className="divider-soft flex flex-col gap-3 pt-6 text-xs text-(--ash) sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-ui uppercase tracking-[0.16em]">Sri Krishna Dental Clinic</p>
-          <p className="font-ui">Built for services, hygiene education, and patient contact across every page.</p>
+          <p className="font-ui uppercase tracking-[0.16em]">Sri Krishna Dental & Aesthetic Clinic</p>
+          <p className="font-ui">Built with care by <Link href="https://gyandeeparyan.vercel.app/" target="_blank" rel="noreferrer"><p className="underline font-semibold">Aryan Studios</p></Link></p>
         </div>
       </div>
     </footer>

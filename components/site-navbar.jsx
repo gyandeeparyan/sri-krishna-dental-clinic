@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { clinic, navigationLinks } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -15,14 +16,11 @@ export function SiteNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-(--hairline) bg-black/88 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-(--hairline) bg-background/88 backdrop-blur-xl">
       <div className="shell flex min-h-16 items-center justify-between gap-4 py-3">
         <Link href="/" className="min-w-0" onClick={() => setIsOpen(false)}>
-          <p className="font-heading-display text-[1.55rem] leading-none tracking-[0.02em] text-(--ink) sm:text-[1.8rem]">
-            Sri Krishna Dental Clinic
-          </p>
-          <p className="mt-1 font-ui text-[11px] uppercase tracking-[0.24em] text-(--ash)">
-            Peterwar, Jharkhand
+          <p className=" text-[1rem] leading-none tracking-[0.02em] text-(--ink) sm:text-[1.8rem]">
+            Sri Krishna Dental & Aesthetic Clinic
           </p>
         </Link>
 
@@ -62,14 +60,21 @@ export function SiteNavbar() {
           </a>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setIsOpen((current) => !current)}
-          className="inline-flex size-11 items-center justify-center rounded-full border border-(--hairline-strong) bg-secondary text-(--ink) lg:hidden"
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="hidden lg:flex items-center gap-2">
+          <ThemeToggle />
+        </div>
+
+        <div className="flex lg:hidden items-center gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setIsOpen((current) => !current)}
+            className="inline-flex size-11 items-center justify-center rounded-full border border-(--hairline-strong) bg-secondary text-(--ink)"
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </div>
 
       {isOpen ? (

@@ -51,11 +51,6 @@ export default function ContactPage() {
           <div className="space-y-5">
             <Badge variant="secondary">Contact the clinic</Badge>
             <p className="editorial-kicker">Reach the clinic</p>
-            <h1 className="editorial-display max-w-4xl">Clear ways to reach the clinic, without friction.</h1>
-            <p className="section-subtitle">
-              Whether a patient wants to call directly, send a message, email the clinic, or submit an inquiry,
-              this page makes that decision easy.
-            </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {methods.map(({ icon: Icon, title, value, href, text }) => (
                 <a key={title} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} className="surface-card hover-rise min-w-0 p-6">
@@ -114,39 +109,6 @@ export default function ContactPage() {
               <div className="mt-4 space-y-3 text-sm leading-7 text-(--body-text)">
                 <p>Share the main concern, the best callback number, and any preferred date.</p>
                 <p>If the concern feels urgent, calling the clinic is still the fastest route.</p>
-              </div>
-            </div>
-          </div>
-
-          <LeadForm />
-        </section>
-
-        <section className="section-glow text-center" style={{ "--section-glow": "var(--accent-yellow-glow)" }}>
-          <div className="mx-auto max-w-3xl space-y-4">
-            <p className="editorial-kicker">After submission</p>
-            <h2 className="editorial-section-title">Patients should know what response looks like.</h2>
-          </div>
-
-          <div className="email-inset mt-10 overflow-hidden text-left">
-            <div className="border-b border-black/10 px-8 py-6">
-              <p className="font-ui text-[12px] uppercase tracking-[0.22em] text-black/55">Inquiry received</p>
-              <p className="mt-3 font-ui text-[1.5rem] font-medium leading-tight text-black">The clinic can review your request and follow up.</p>
-            </div>
-            <div className="grid gap-6 px-8 py-7 md:grid-cols-2">
-              <div>
-                <p className="font-ui text-[12px] uppercase tracking-[0.18em] text-black/45">Response route</p>
-                <div className="mt-3 space-y-2 text-[15px] leading-7 text-black">
-                  <p>Phone or WhatsApp for faster coordination</p>
-                  <p>Email for general questions and follow-up</p>
-                </div>
-              </div>
-              <div>
-                <p className="font-ui text-[12px] uppercase tracking-[0.18em] text-black/45">Clinic details</p>
-                <div className="mt-3 space-y-2 text-[15px] leading-7 text-black">
-                  <p>{clinic.phoneDisplay}</p>
-                  <p>{clinic.email}</p>
-                  <p>{clinic.address}</p>
-                </div>
               </div>
             </div>
           </div>

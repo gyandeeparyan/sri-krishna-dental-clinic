@@ -36,94 +36,26 @@ export default function AboutPage() {
   return (
     <main className="page-frame">
       <div className="shell space-y-20 py-16 sm:space-y-24 sm:py-20 lg:py-24">
-        <section className="hero-grid gap-8">
-          <div className="space-y-5">
-            <Badge variant="secondary">About the clinic</Badge>
-            <p className="editorial-kicker">Practice story</p>
-            <h1 className="editorial-display max-w-4xl">
-              A local practice presented with more calm, more structure, and more seriousness.
-            </h1>
-            <p className="section-subtitle">
-              The clinic story now feels closer to the in-person experience: measured, practical, and patient-first.
-              This page is less about promotion and more about tone, trust, and what care feels like before treatment begins.
-            </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="feature-card-bordered">
-                <p className="editorial-kicker">Lead doctor</p>
-                <p className="mt-4 font-ui text-2xl font-medium text-foreground">{clinic.doctor}</p>
-                <p className="mt-3 body-copy">
-                  Leading the practice with a focus on comfort, straightforward explanations, and dependable care.
-                </p>
-              </div>
-              <div className="feature-card-bordered">
-                <p className="editorial-kicker">Location</p>
-                <p className="mt-4 font-ui text-2xl font-medium text-foreground">{clinic.address}</p>
-                <p className="mt-3 body-copy">
-                  Positioned for local families who want a clinic presence that feels reachable and clear.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="surface-card p-8">
-            <p className="editorial-kicker">What this page does</p>
-            <div className="mt-6 space-y-5">
-              <div className="flex items-start gap-3">
-                <SmilePlus className="mt-1 size-5 text-(--ash)" />
-                <p className="body-copy">Introduces the clinic personality before a patient books or calls.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="mt-1 size-5 text-(--ash)" />
-                <p className="body-copy">Signals that treatment information and communication are handled with care.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-1 size-5 text-(--ash)" />
-                <p className="body-copy">Keeps the clinic grounded in place, hours, and local accessibility.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section-glow" style={{ "--section-glow": "var(--accent-blue-glow)" }}>
-          <div className="max-w-3xl space-y-4">
-            <p className="editorial-kicker">Values</p>
-            <h2 className="editorial-section-title">The clinic voice is built around comfort, clarity, and steadiness.</h2>
-          </div>
-          <div className="feature-grid mt-10">
-          {values.map(({ icon: Icon, title, text }) => (
-            <Card key={title} className="bg-card py-5">
-              <CardHeader className="space-y-3">
-                <span className="flex size-12 items-center justify-center rounded-full border border-input bg-secondary text-(--ash)">
-                  <Icon className="size-5" />
-                </span>
-                <CardTitle>{title}</CardTitle>
-                <CardDescription>{text}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-          </div>
-        </section>
-
         <section className="story-split">
           <div className="space-y-5">
             <p className="editorial-kicker">What patients can expect</p>
-            <h2 className="editorial-section-title">A cleaner patient journey, online and in person.</h2>
+            <h2 className="editorial-section-title">Your comfort and care come first</h2>
             <div className="grid gap-4">
               <div className="feature-card-bordered">
                 <div className="flex items-start gap-3">
-                  <Stethoscope className="mt-1 size-5 text-(--accent-green)" />
+                  <Stethoscope className="-mt-1.5 size-10 text-(--accent-green)" />
                   <div>
-                    <p className="font-ui text-lg font-medium text-foreground">Straightforward service information</p>
-                    <p className="mt-2 body-copy">The website now helps patients understand care options before they call or visit.</p>
+                    <p className="font-ui text-lg font-medium text-foreground">Gentle, pain-free treatment</p>
+                    <p className="mt-2 body-copy">We use the latest techniques and take time to explain every step. Your comfort is our priority, and we ensure a calm, relaxed experience for every patient.</p>
                   </div>
                 </div>
               </div>
               <div className="feature-card-bordered">
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-1 size-5 text-(--accent-green)" />
+                  <MapPin className="-mt-1.5 size-10 text-(--accent-green)" />
                   <div>
-                    <p className="font-ui text-lg font-medium text-foreground">Accessible local contact points</p>
-                    <p className="mt-2 body-copy">Patients can call, email, message on WhatsApp, or open directions in one step.</p>
+                    <p className="font-ui text-lg font-medium text-foreground">Trusted local care, whenever you need it</p>
+                    <p className="mt-2 body-copy">Right here in your community. Easy to reach by phone, email, or WhatsApp—and we're always ready to answer your questions about dental health.</p>
                   </div>
                 </div>
               </div>
@@ -161,8 +93,7 @@ export default function AboutPage() {
             <article className="surface-elevated p-6">
               <p className="editorial-kicker">Practice character</p>
               <p className="mt-4 body-copy">
-                Patients should feel the clinic is grounded, local, and approachable. The imagery supports that by
-                showing real consultation energy rather than abstract placeholders or technical metaphors.
+                We're a trusted neighborhood clinic where you're never just a patient number. Dr. Abhijeet Prakash and the team take time to listen, understand your concerns, and build real relationships with families in our community. Every visit is personal—we remember your history and your goals for your family's oral health.
               </p>
               <div className="mt-5 overflow-hidden rounded-lg border border-(--hairline-strong)">
                 <div className="relative aspect-16/10">

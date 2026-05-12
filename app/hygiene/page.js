@@ -39,42 +39,9 @@ export default function HygienePage() {
   return (
     <main className="page-frame">
       <div className="shell space-y-20 py-16 sm:space-y-24 sm:py-20 lg:py-24">
-        <section className="hero-grid gap-8">
-          <div className="space-y-5">
-            <Badge variant="secondary">Dental hygiene tips</Badge>
-            <p className="editorial-kicker">Between appointments</p>
-            <h1 className="editorial-display max-w-4xl">
-              Good hygiene guidance should feel helpful, practical, and easy to follow.
-            </h1>
-            <p className="section-subtitle">
-              This page gives the website educational value for real users. It helps families understand the small
-              daily habits that protect teeth, gums, and long-term smile health between clinic visits.
-            </p>
-          </div>
-
-          <div className="surface-card p-8">
-            <p className="editorial-kicker">Small habits, real effect</p>
-            <div className="mt-6 space-y-5">
-              <div className="flex items-start gap-3">
-                <Clock3 className="mt-1 size-5 text-(--ash)" />
-                <p className="body-copy">Twice-daily brushing and early check-ups prevent many avoidable problems.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="mt-1 size-5 text-(--ash)" />
-                <p className="body-copy">Clear guidance makes a clinic feel useful even when a patient is not in treatment.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <HeartPulse className="mt-1 size-5 text-(--ash)" />
-                <p className="body-copy">Early attention to bleeding gums, sensitivity, or pain is always easier than delay.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="section-glow" style={{ "--section-glow": "var(--accent-green-glow)" }}>
           <div className="max-w-3xl space-y-4">
             <p className="editorial-kicker">Key guidance</p>
-            <h2 className="editorial-section-title">Patients trust clinics that help them between visits too.</h2>
           </div>
           <div className="feature-grid mt-10">
           {hygieneTips.map((tip, index) => {
@@ -127,7 +94,7 @@ export default function HygienePage() {
                 className="object-cover"
               />
               <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/25 to-transparent p-5">
-                <p className="font-ui text-sm leading-6 text-white/86">{heroGallery[3].caption}</p>
+              
               </div>
             </article>
 
@@ -144,8 +111,7 @@ export default function HygienePage() {
               <div className="p-6">
                 <p className="editorial-kicker">Why it matters</p>
                 <p className="mt-3 body-copy">
-                  Visual guidance for models, brushing habits, and child-focused care makes this page feel useful in a
-                  practical way, not just decorative.
+                  Consistent, gentle care prevents most dental issues before they start. It’s not about perfect technique or expensive products — it’s about making brushing and flossing a simple, non-negotiable part of the day. The clinic is here to support patients with practical advice and early care when needed, but the real power is in the daily habits that keep smiles healthy for life.
                 </p>
               </div>
             </article>

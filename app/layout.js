@@ -7,6 +7,7 @@ import {
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNavbar } from "@/components/site-navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
@@ -50,11 +51,13 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"
       >
-        <div className="relative flex min-h-full flex-col">
-          <SiteNavbar />
-          <div className="flex-1">{children}</div>
-          <SiteFooter />
-        </div>
+        <ThemeProvider>
+          <div className="relative flex min-h-full flex-col">
+            <SiteNavbar />
+            <div className="flex-1">{children}</div>
+            <SiteFooter />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
