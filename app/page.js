@@ -73,19 +73,38 @@ export default function Home() {
 
             {/* Content section - below image on mobile */}
             <div className="max-w-3xl space-y-7 order-2 lg:order-1">
-              <div className="flex flex-wrap items-center gap-3">
-                <Badge variant="secondary">{clinic.doctor}</Badge>
-              </div>
-
               <div className="space-y-5">
-                <p className="editorial-kicker">Confident care, quieter presentation</p>
-                <h1 className="editorial-display max-w-4xl">
-                Dental care for families, with clarity from the first glance.
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="surface-elevated flex size-18 items-center justify-center rounded-3xl p-3 sm:size-20">
+                    <Image
+                      src="/brand-mark.png"
+                      alt={clinic.name}
+                      width={72}
+                      height={72}
+                      priority
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <p className="editorial-kicker">Peterwar, Jharkhand</p>
+                    <Badge variant="secondary">{clinic.doctor}</Badge>
+                  </div>
+                </div>
+
+                <h1 className="max-w-5xl  editorial-display text-[clamp(2.6rem,7vw,5.25rem)] leading-[0.94] tracking-[-0.055em] text-(--ink) text-balance">
+                  <span className="block">Sri Krishna</span>
+                  <span className="block">Dental &amp; Aesthetic Clinic</span>
                 </h1>
 
+                <p className="max-w-3xl text-[1.05rem] leading-8 text-(--body-text) sm:text-[1.2rem]">
+                  Dental care for families, with clarity from the first glance.
+                </p>
+                <p className="fine-copy max-w-2xl text-sm sm:text-base">
+                  Warm, direct care with a serious clinical presence and treatment explanations that feel easy to follow.
+                </p>
               </div>
 
-              <div className="flex md:flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="flex  gap-3 sm:flex-row sm:flex-wrap">
                 <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "w-fit px-4")}>
                   Book inquiry
                 </Link>

@@ -97,12 +97,32 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const themeScript = `
+    (function() {
+      try {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = stored ? stored === 'dark' : prefersDark;
+        if (!isDark) {
+          document.documentElement.classList.add('light');
+        }
+      } catch (e) {}
+    })()
+  `;
+
   return (
     <html
       lang="en"
       suppressHydrationWarning
       className={`${bodyFont.variable} ${headingFont.variable} ${uiFont.variable} ${monoFont.variable} h-full scroll-smooth antialiased`}
     >
+      <head>
+      <link rel="icon" href="/brand-mark.svg" type="image/svg+xml" />
+      <Script
+        id="theme-init"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: themeScript }}
+      />
       <Script
         id="schema-org"
         type="application/ld+json"
@@ -134,6 +154,7 @@ export default function RootLayout({ children }) {
           }),
         }}
       />
+      </head>
       <body
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"

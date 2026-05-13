@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -17,15 +18,25 @@ export function SiteNavbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-(--hairline) bg-background/88 backdrop-blur-xl">
-      <div className="shell relative flex min-h-16 items-center justify-between gap-4 py-3 lg:flex-row flex-col">
-        <Link href="/" className="min-w-0" onClick={() => setIsOpen(false)}>
-          <p className=" text-[2.5rem] font-heading-display font-ui font-extrabold leading-none tracking-[0.02em] text-(--ink) sm:text-[1.8rem]">
-            Sri Krishna Dental & Aesthetic Clinic
-          </p>
+      <div className="shell relative flex min-h-16 flex-col gap-4 py-3 lg:flex-row lg:items-center lg:justify-between">
+        <Link
+          href="/"
+          className="flex h-16 w-auto items-center"
+          onClick={() => setIsOpen(false)}
+          aria-label={clinic.name}
+        >
+          <Image
+            src="/brand-mark.png"
+            alt={clinic.name}
+            width={100}
+            height={96}
+            priority
+            className="h-14 w-auto sm:h-16"
+          />
         </Link>
 
         {/* Sticky buttons positioned absolutely on mobile */}
-        <div className="absolute top-13 right-4 flex lg:hidden items-center gap-2 z-51">
+        <div className="absolute top-4 right-4 z-51 flex items-center gap-2 lg:hidden">
           <ThemeToggle />
           <button
             type="button"

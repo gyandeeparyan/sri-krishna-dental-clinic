@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGradient" x1="103" y1="106" x2="398" y2="379" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59E6DB" />
+      <stop offset="1" stop-color="#2FBDB6" />
+    </linearGradient>
+    <filter id="softGlow" x="72" y="54" width="368" height="404" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#59E6DB" flood-opacity="0.18" />
+    </filter>
+  </defs>
+  <g filter="url(#softGlow)">
+    <path
+      d="M164 243C154 210 153 179 154 154C156 123 173 104 200 108C223 111 236 129 251 139C274 155 316 153 345 133C363 121 380 106 395 101C392 121 381 143 365 157C345 175 319 183 292 183C271 183 249 179 228 168C205 157 187 138 179 140C165 145 164 186 171 224L164 243Z"
+      fill="url(#brandGradient)"
+    />
+    <path
+      d="M161 242C152 206 150 175 152 149C156 104 183 81 220 88C245 93 261 111 277 124C296 140 334 143 364 127C383 117 401 103 415 90C410 125 391 157 364 176C340 193 311 200 281 200C260 200 238 196 219 186C191 171 180 145 171 145C163 145 160 183 168 225"
+      stroke="url(#brandGradient)"
+      stroke-width="12"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M173 248C168 282 171 327 180 360"
+      stroke="url(#brandGradient)"
+      stroke-width="18"
+      stroke-linecap="round"
+    />
+    <path
+      d="M296 308C280 309 271 320 269 344C266 382 267 412 272 437C280 423 283 404 286 383C289 359 296 343 305 342C316 341 322 355 326 376C331 403 333 420 341 434C353 416 358 392 361 365C365 331 376 295 397 251"
+      stroke="url(#brandGradient)"
+      stroke-width="18"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M104 281C103 266 114 252 129 249L396 188C413 184 430 194 434 211C438 228 427 245 411 248L130 308C114 311 105 300 104 281Z"
+      fill="url(#brandGradient)"
+    />
+    <path
+      d="M124 271C123 261 130 252 140 250L398 191C410 188 421 196 424 207C426 219 419 230 408 232L141 292C132 294 125 285 124 275V271Z"
+      stroke="#8BF2EB"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <circle cx="292" cy="233" r="9" fill="#030405" />
+    <circle cx="318" cy="228" r="9" fill="#030405" />
+    <circle cx="344" cy="222" r="9" fill="#030405" />
+    <path
+      d="M118 251L112 309"
+      stroke="#0C0F10"
+      stroke-width="8"
+      stroke-linecap="round"
+    />
+    <path
+      d="M109 306C106 322 101 337 95 352C104 352 113 346 119 336C123 327 122 317 109 306Z"
+      fill="url(#brandGradient)"
+    />
+    <path
+      d="M92 280C91 268 100 258 112 258C124 258 133 268 133 280C133 292 124 301 112 301C100 301 92 292 92 280Z"
+      fill="url(#brandGradient)"
+    />
+  </g>
+</svg>
